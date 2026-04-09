@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CheckoutPage"
+             Title="Оформление заказа"
+             BackgroundColor="#FFF8E1">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Контактная информация"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#D32F2F"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Ваше имя:" FontSize="16"/>
+            <Entry x:Name="NameEntry" 
+                   Placeholder="Введите имя"
+                   BackgroundColor="White"
+                   Margin="0,0,0,10"/>
+
+            <Label Text="Телефон:" FontSize="16"/>
+            <Entry x:Name="PhoneEntry" 
+                   Placeholder="+7 (___) ___-__-__"
+                   Keyboard="Telephone"
+                   BackgroundColor="White"
+                   Margin="0,0,0,10"/>
+
+            <Label Text="Адрес доставки:" FontSize="16"/>
+            <Entry x:Name="AddressEntry" 
+                   Placeholder="Город, улица, дом, квартира"
+                   BackgroundColor="White"
+                   Margin="0,0,0,10"/>
+
+            <BoxView HeightRequest="1" 
+                     Color="Gray" 
+                     Margin="0,20"/>
+
+            <Label x:Name="OrderTotalLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#4CAF50"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Отправить заказ"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="18"
+                    Clicked="SubmitOrder_Clicked"
+                    CornerRadius="10"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

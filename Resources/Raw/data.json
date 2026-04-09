@@ -1,0 +1,39 @@
+{
+  "Pizzas": [
+    {
+      "Id": 1,
+      "Name": "Маргарита",
+      "Description": "Томаты, моцарелла, базилик",
+      "BasePrice": 350,
+      "ImageUrl": "margarita.png"
+    },
+    {
+      "Id": 2,
+      "Name": "Пепперони",
+      "Description": "Острая колбаса, сыр моцарелла",
+      "BasePrice": 450,
+      "ImageUrl": "pepperoni.png"
+    },
+    {
+      "Id": 3,
+      "Name": "Гавайская",
+      "Description": "Ветчина, ананасы, сыр",
+      "BasePrice": 400,
+      "ImageUrl": "hawaiian.png"
+    },
+    {
+      "Id": 4,
+      "Name": "Четыре сыра",
+      "Description": "Моцарелла, пармезан, горгонзола, чеддер",
+      "BasePrice": 500,
+      "ImageUrl": "fourcheese.png"
+    }
+  ],
+  "Ingredients": [
+    { "Id": 1, "Name": "Доп. сыр", "Price": 50 },
+    { "Id": 2, "Name": "Бекон", "Price": 80 },
+    { "Id": 3, "Name": "Грибы", "Price": 40 },
+    { "Id": 4, "Name": "Оливки", "Price": 30 },
+    { "Id": 5, "Name": "Перец халапеньо", "Price": 35 }
+  ]
+}

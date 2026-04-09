@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.ConstructorPage"
+             Title="Конструктор пиццы"
+             BackgroundColor="#FFF8E1">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Label x:Name="PizzaNameLabel" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   TextColor="#D32F2F"
+                   HorizontalOptions="Center"/>
+
+            <Image x:Name="PizzaImage" 
+                   Aspect="AspectFill"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"
+                   BackgroundColor="#F5F5F5"/>
+
+            <Label Text="Выберите размер:" FontSize="18" FontAttributes="Bold"/>
+            <Picker x:Name="SizePicker" 
+                    Title="Размер"
+                    BackgroundColor="White"
+                    SelectedIndexChanged="SizePicker_SelectedIndexChanged"/>
+
+            <Label Text="Дополнительные ингредиенты:" FontSize="18" FontAttributes="Bold"/>
+            <VerticalStackLayout x:Name="IngredientsLayout" Spacing="10"/>
+
+            <Label Text="Количество:" FontSize="18" FontAttributes="Bold"/>
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="-" WidthRequest="40" Clicked="DecreaseQuantity_Clicked"/>
+                <Label x:Name="QuantityLabel" 
+                       Text="1" 
+                       FontSize="20" 
+                       VerticalOptions="Center"
+                       WidthRequest="40"
+                       HorizontalTextAlignment="Center"/>
+                <Button Text="+" WidthRequest="40" Clicked="IncreaseQuantity_Clicked"/>
+            </HorizontalStackLayout>
+
+            <Label x:Name="PriceLabel" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   TextColor="#4CAF50"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Добавить в корзину" 
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="18"
+                    Clicked="AddToCart_Clicked"
+                    CornerRadius="10"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

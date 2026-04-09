@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CartPage"
+             Title="Мой заказ"
+             BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="*, Auto" Padding="10">
+        <CollectionView x:Name="CartList" Grid.Row="0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,8" 
+                           BackgroundColor="White" 
+                           CornerRadius="8">
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Pizza.Name}" 
+                                       FontAttributes="Bold" 
+                                       FontSize="18"
+                                       TextColor="#D32F2F"/>
+                                <Label Text="{Binding Size.Size}" 
+                                       TextColor="Gray"/>
+                                <Label x:Name="IngredientsLabel"
+                                       TextColor="#FF8C00"
+                                       FontSize="14"/>
+                                <Label Text="{Binding Quantity, StringFormat='Количество: {0}'}"
+                                       FontSize="14"/>
+                                <Label Text="{Binding TotalPrice, StringFormat='{0} ₽'}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       TextColor="#4CAF50"/>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Grid.Column="1" 
+                                                 Spacing="5"
+                                                 VerticalOptions="Center">
+                                <Button Text="−" 
+                                        WidthRequest="30"
+                                        HeightRequest="30"
+                                        Padding="0"
+                                        Clicked="DecreaseQuantity_Clicked"/>
+                                <Button Text="+" 
+                                        WidthRequest="30"
+                                        HeightRequest="30"
+                                        Padding="0"
+                                        Clicked="IncreaseQuantity_Clicked"/>
+                                <Button Text="X" 
+                                        WidthRequest="30"
+                                        HeightRequest="30"
+                                        Padding="0"
+                                        BackgroundColor="#FF6347"
+                                        Clicked="RemoveItem_Clicked"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <VerticalStackLayout HorizontalOptions="Center" 
+                                     VerticalOptions="Center"
+                                     Spacing="10">
+                    <Label Text="Корзина" FontSize="48"/>
+                    <Label Text="Корзина пуста" 
+                           FontSize="20" 
+                           TextColor="Gray"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <VerticalStackLayout Grid.Row="1" 
+                             Spacing="10" 
+                             BackgroundColor="White"
+                             Padding="15"
+                             Shadow="{Shadow Brush=Gray, Offset='0,2', Radius=5}">
+            <Label x:Name="TotalLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#D32F2F"
+                   HorizontalOptions="Center"/>
+
+            <Button x:Name="CheckoutButton"
+                    Text="Оформить заказ"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontSize="18"
+                    Clicked="Checkout_Clicked"
+                    CornerRadius="10"
+                    IsEnabled="False"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

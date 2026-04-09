@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             Title="Наше меню"
+             BackgroundColor="#FFF8E1">
+
+    <Grid RowDefinitions="Auto, *" Padding="10">
+        <Button x:Name="CartButton" 
+                Text="Корзина (0)" 
+                HorizontalOptions="End"
+                BackgroundColor="#FF6347"
+                TextColor="White"
+                Clicked="CartButton_Clicked"
+                Margin="0,0,0,10"/>
+
+        <CollectionView x:Name="PizzaList" Grid.Row="1" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,10" 
+                           BackgroundColor="White" 
+                           CornerRadius="10" 
+                           HasShadow="True">
+                        <Grid ColumnDefinitions="120,*" ColumnSpacing="15" Padding="10">
+                            <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   WidthRequest="120"
+                                   HeightRequest="120"
+                                   VerticalOptions="Center"
+                                   BackgroundColor="#F5F5F5"/>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="5">
+                                <Label Text="{Binding Name}" 
+                                       FontSize="22" 
+                                       FontAttributes="Bold"
+                                       TextColor="#D32F2F"/>
+                                <Label Text="{Binding Description}" 
+                                       TextColor="Gray"
+                                       FontSize="14"/>
+                                <Label Text="{Binding BasePrice, StringFormat='{0} ₽'}" 
+                                       FontSize="18" 
+                                       TextColor="#4CAF50"
+                                       FontAttributes="Bold"/>
+                                <Button Text="Выбрать" 
+                                        BackgroundColor="#FF8C00" 
+                                        TextColor="White"
+                                        Clicked="SelectPizza_Clicked"
+                                        CornerRadius="5"
+                                        Margin="0,5,0,0"
+                                        HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

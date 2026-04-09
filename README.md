@@ -15,7 +15,8 @@
 ## 🧭 Как сделать заказ (по шагам)
 
 ### 🔹 Шаг 1: Выберите пиццу
-<img width="490" height="696" alt="image" src="https://github.com/user-attachments/assets/49ae81e8-e2fb-4dff-8a36-586d118000ac" />
+<img width="522" height="705" alt="image" src="https://github.com/user-attachments/assets/43e6a53f-d44f-4743-86e0-9aaab72cc6a0" />
+
 
 
 На главном экране вы увидите карточки с пиццами:
@@ -30,7 +31,8 @@
 ---
 
 ### 🔹 Шаг 2: Настройте пиццу в конструкторе
-<img width="489" height="692" alt="image" src="https://github.com/user-attachments/assets/f3da627c-a1b8-4e3c-a268-838b5be2bf1f" />
+<img width="517" height="694" alt="image" src="https://github.com/user-attachments/assets/a462dab1-1d12-49d2-8ba9-c4a720130d20" />
+
 
 После нажатия «Выбрать» откроется экран настройки:
 
@@ -61,7 +63,8 @@
 ---
 
 ### 🔹 Шаг 3: Проверьте корзину
-<img width="491" height="697" alt="image" src="https://github.com/user-attachments/assets/719d5833-20d7-4d50-afe8-80cc5387db7c" />
+<img width="508" height="681" alt="image" src="https://github.com/user-attachments/assets/04880842-a311-4cfe-b484-00bb8cfbf366" />
+
 
 
 Нажмите на кнопку 🛒 Корзина вверху экрана, чтобы открыть корзину.
@@ -87,7 +90,8 @@
 ---
 
 ### 🔹 Шаг 4: Оформите доставку
-<img width="491" height="653" alt="image" src="https://github.com/user-attachments/assets/2a4944e1-1081-4df6-8a7c-6018e1858a7c" />
+<img width="511" height="631" alt="image" src="https://github.com/user-attachments/assets/b9fd227c-8b28-4a2d-ac19-dcb9137406c8" />
+
 
 На последнем экране укажите:
 
